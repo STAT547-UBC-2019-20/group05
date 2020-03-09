@@ -6,7 +6,6 @@ library(purrr)
 
 #Load in survey_data csv file
 survey_data <- read.csv(here::here("data", "survey_data.csv"))
-view(survey_data)
 
 #Create images folder
 dir.create("images")
@@ -21,3 +20,4 @@ ggplot(survey_data, aes(current_living_location)) +
   ylab("Number of Graduate Students") +
   theme_minimal() +
   ggsave('basic_demographics1.png', path = here("images"), width = 8, height = 5)
+

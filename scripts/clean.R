@@ -119,5 +119,22 @@ for (i in 1:length(survey_data$supervisor_relationship)){
   survey_data$work_life_balance[i] <- str_replace(survey_data$work_life_balance[i], "1 = Not at all satisfied", "1")
 }
 
+#Fix column "level_of_satisfaction_with_decision_to_pursue_a_PhD" to only contain numbers
+for (i in 1:length(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD)){
+  survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i] <- str_replace(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i], "Very satisfied", "5")
+}
+for (i in 1:length(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD)){
+  survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i] <- str_replace(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i], "Somewhat satisfied", "4")
+}
+for (i in 1:length(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD)){
+  survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i] <- str_replace(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i], "Neither satisfied nor dissatisfied", "3")
+}
+for (i in 1:length(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD)){
+  survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i] <- str_replace(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i], "Somewhat dissatisfied", "2")
+}
+for (i in 1:length(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD)){
+  survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i] <- str_replace(survey_data$level_of_satisfaction_with_decision_to_pursue_a_PhD[i], "Very dissatisfied", "1")
+}
+
 # Save object
 write.csv(survey_data, here::here("data", "survey_data.csv"))
