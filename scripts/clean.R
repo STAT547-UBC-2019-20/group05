@@ -2,6 +2,7 @@ library(tidyverse)
 library(janitor)
 library(dplyr)
 library(here)
+library(stringr)
 
 ## Load the csv
 survey_raw <- read.csv(here::here("data", "survey_raw.csv"))
