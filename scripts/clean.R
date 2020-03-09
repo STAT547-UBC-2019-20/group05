@@ -97,5 +97,27 @@ survey_data <-
            'experienced_bullying_in_PhD', 'who_was_the_perpetrator', 'able_to_speak_out_about_bullying_experiences',
            'experienced_discrimination_or_harrasment', 'which_have_you_experienced'))
 
+#Fix column "supervisor relationship" to contain only numbers.
+for (i in 1:length(survey_data$supervisor_relationship)){
+  survey_data$supervisor_relationship[i] <- str_replace(survey_data$supervisor_relationship[i], "7 = Extremely satisfied", "7")
+}
+for (i in 1:length(survey_data$supervisor_relationship)){
+  survey_data$supervisor_relationship[i] <- str_replace(survey_data$supervisor_relationship[i], "4 = Neither satisfied nor dissatisfied", "4")
+}
+for (i in 1:length(survey_data$supervisor_relationship)){
+  survey_data$supervisor_relationship[i] <- str_replace(survey_data$supervisor_relationship[i], "1 = Not at all satisfied", "1")
+}
+
+#Fix column "work life balance" to contain only numbers.
+for (i in 1:length(survey_data$work_life_balance)){
+  survey_data$work_life_balance[i] <- str_replace(survey_data$work_life_balance[i], "7 = Extremely satisfied", "7")
+}
+for (i in 1:length(survey_data$work_life_balance)){
+  survey_data$work_life_balance[i] <- str_replace(survey_data$work_life_balance[i], "4 = Neither satisfied nor dissatisfied", "4")
+}
+for (i in 1:length(survey_data$supervisor_relationship)){
+  survey_data$work_life_balance[i] <- str_replace(survey_data$work_life_balance[i], "1 = Not at all satisfied", "1")
+}
+
 # Save object
 write.csv(survey_data, here::here("data", "survey_data.csv"))
