@@ -8,6 +8,9 @@ library(purrr)
 survey_data <- read.csv(here::here("data", "survey_data.csv"))
 view(survey_data)
 
+#Create images folder
+dir.create("images")
+
 fix_likert_1 <- function(df){
   for (i in seq_along(df)){
     str_replace(df, "7 = Extremely satisfied", "7")
