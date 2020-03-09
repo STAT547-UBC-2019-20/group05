@@ -30,4 +30,5 @@ ggplot(survey_data, aes(current_living_location)) +
   coord_flip() +
   xlab("Continent") +
   ylab("Number of Graduate Students") +
-  theme_minimal()
+  theme_minimal() +
+  ggsave('basic_demographics1.png', path = here("images"), width = 8, height = 5)
