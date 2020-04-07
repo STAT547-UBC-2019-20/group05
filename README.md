@@ -90,7 +90,15 @@ make all
 ```
 Make all will call a series of scripts (outlined in "Manual Usage" above) in sequence in order to produce the entire analysis
 
-## Dashboard App
+# Dashboard App
+
+## Final Product:
+
+Our group's complete dashbaord can be found via the following link. Enjoy!
+
+https://phd-satisfaction-ij.herokuapp.com/
+
+## Dashboard Creation Process
 
 As part of [milestone 4](https://github.com/STAT547-UBC-2019-20/group05/tree/master/docs/milestone-04), we have created an idea for a dashboard and a preliminary sketch of what it would look like. Detailed [instructions](https://stat545.stat.ubc.ca/evaluation/milestone_04/milestone_04/) on what is expected from this assignment are in the STAT547 website under [team projects](https://stat545.stat.ubc.ca/evaluation/projects/). Task #1 entails addressing student feedback on our project progress thus far.
 
@@ -122,5 +130,4 @@ Andi is a fourth year undergraduate student, and she is currently looking at her
 ### Example sketch
 
 ![](https://github.com/STAT547-UBC-2019-20/group05/blob/master/docs/milestone-04/dashboard.png)
-
 
