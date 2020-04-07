@@ -59,7 +59,7 @@ make_plot <- function(yaxis = "supervisor_relationship"){
 }
  
 # plot 2 
-make_plot2 <- function(ageslider = "1"){
+make_plot2 <- function(ageslider = 1){
   sliderTibble <- tibble(label = levels(survey_data$age), value = c(1:length(levels(survey_data$age))))
   slider_label <- sliderTibble$label[sliderTibble$value == ageslider]
   p1 <- survey_data %>% 
